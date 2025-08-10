@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base colors - Dark elegant theme */
+    --background: 217 19% 8%;        /* Very dark background */
+    --foreground: 36 45% 95%;        /* Light text */
+    --card: 217 19% 12%;             /* Card background */
+    --card-foreground: 36 45% 95%;   /* Card text */
+    --popover: 217 19% 12%;
+    --popover-foreground: 36 45% 95%;
+    
+    /* Muted colors */
+    --muted: 217 19% 15%;
+    --muted-foreground: 36 20% 65%;
+    
+    /* Borders and inputs */
+    --border: 36 20% 18%;
+    --input: 36 20% 18%;
+    --ring: 36 84% 55%;
+    
+    /* Primary brand colors - Elegant gold */
+    --primary: 36 84% 55%;           /* Rich gold */
+    --primary-foreground: 217 19% 8%;
+    
+    /* Secondary */
+    --secondary: 217 19% 15%;
+    --secondary-foreground: 36 45% 95%;
+    
+    /* Accent - Warm gold */
+    --accent: 36 84% 65%;            /* Brighter gold for highlights */
+    --accent-foreground: 217 19% 8%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 36 45% 95%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 217 19% 10%;
+    --sidebar-foreground: 36 45% 95%;
+    --sidebar-primary: 36 84% 55%;
+    --sidebar-primary-foreground: 217 19% 8%;
+    --sidebar-accent: 217 19% 15%;
+    --sidebar-accent-foreground: 36 45% 95%;
+    --sidebar-border: 36 20% 18%;
+    --sidebar-ring: 36 84% 55%;
+
+    /* Brand tokens */
+    --brand-gold: 36 84% 55%;
+    --brand-gold-soft: 36 92% 70%;
+    --brand-brown: 25 15% 12%;
+
+    /* Special gradients and effects */
+    --gradient-hero: linear-gradient(135deg, hsl(36 84% 45%) 0%, hsl(36 70% 35%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(217 19% 12%) 0%, hsl(217 19% 8%) 100%);
+    --shadow-gold: 0 10px 40px -10px hsl(36 84% 45% / 0.3);
+    --shadow-elegant: 0 25px 50px -12px hsl(217 19% 4% / 0.6);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 42 85% 55%; /* brand gold in dark */
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 48 96% 53%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Brand tokens */
+    --brand-gold: 42 85% 55%;
+    --brand-gold-soft: 42 92% 70%;
+    --brand-brown: 25 15% 12%;
+
+    /* Gradients & shadows */
+    --gradient-hero: linear-gradient(120deg, hsl(var(--background)) 0%, hsl(var(--brand-brown)) 100%);
+    --shadow-gold: 0 10px 30px hsl(var(--brand-gold) / 0.35);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
