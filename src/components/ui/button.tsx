@@ -17,7 +17,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         
         // Custom variants inspired by the reference designs
-        hero: "bg-gradient-to-r from-accent to-primary text-primary-foreground hover:from-accent/90 hover:to-primary/90 shadow-[var(--shadow-gold)] border border-accent/20 font-semibold tracking-wide transition-all duration-300 hover:scale-105",
+        hero: "bg-accent text-background hover:bg-accent/90 shadow-[var(--shadow-gold)] font-semibold tracking-wide transition-all duration-300 hover:scale-105",
         gold: "bg-accent/20 text-accent border border-accent/40 hover:bg-accent hover:text-primary-foreground backdrop-blur-sm transition-all duration-300 hover:shadow-[var(--shadow-gold)]",
         elegant: "bg-card border border-accent/30 text-foreground hover:bg-accent/10 hover:border-accent/60 transition-all duration-300 shadow-[var(--shadow-elegant)]"
       },

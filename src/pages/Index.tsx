@@ -10,18 +10,18 @@ import cutBarba from "@/assets/cut-barba.jpg";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-border">
-        <nav className="container flex h-16 items-center justify-between">
-          <a href="#" className="font-display text-xl tracking-wide">Erik Roncaglio</a>
+        <nav className="container flex h-16 items-center justify-between px-4">
+          <a href="#" className="font-display text-lg md:text-xl tracking-wide">Erik Roncaglio</a>
           <div className="hidden md:flex items-center gap-6 text-sm">
             <a href="#portfolio" className="hover:text-accent transition-colors">Portfólio</a>
             <a href="#sobre" className="hover:text-accent transition-colors">Sobre</a>
             <a href="#experiencia" className="hover:text-accent transition-colors">Experiência</a>
             <a href="#servicos" className="hover:text-accent transition-colors">Serviços</a>
           </div>
-          <Button asChild variant="gold" size="sm">
-            <a href="#contato" aria-label="Agendar horário">Agendar horário</a>
+          <Button asChild variant="gold" size="sm" className="text-xs px-3 py-2 md:text-sm md:px-4">
+            <a href="#contato" aria-label="Agendar horário">Agendar</a>
           </Button>
         </nav>
       </header>
@@ -30,26 +30,26 @@ const Index = () => {
         {/* Hero Profissional */}
         <section aria-label="Apresentação" className="relative">
           <div className="absolute inset-0 bg-[image:var(--gradient-hero)] opacity-60" aria-hidden="true" />
-          <img src={heroImage} alt="Erik Roncaglio realizando um corte fade profissional em seu estúdio" className="w-full h-[80vh] object-cover object-center" loading="eager" decoding="async" />
+          <img src={heroImage} alt="Erik Roncaglio realizando um corte fade profissional em seu estúdio" className="w-full h-[70vh] md:h-[80vh] object-cover object-center" loading="eager" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
-          <div className="container absolute inset-0 flex items-end pb-20">
+          <div className="container absolute inset-0 flex items-end pb-12 md:pb-20 px-4">
             <div className="max-w-3xl">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex items-center gap-2 text-accent">
-                  <Award size={20} />
-                  <span className="text-sm font-medium">Barbeiro Certificado • 12+ anos de experiência</span>
+              <div className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6">
+                <div className="flex items-center gap-1 md:gap-2 text-accent">
+                  <Award size={16} className="md:w-5 md:h-5" />
+                  <span className="text-xs md:text-sm font-medium">Barbeiro Certificado • 12+ anos</span>
                 </div>
               </div>
-              <h1 className="font-display text-5xl md:text-6xl leading-tight mb-6">Erik Roncaglio</h1>
-              <p className="text-xl md:text-2xl mb-4 text-accent font-medium">Mestre em Barbearia Clássica & Moderna</p>
-              <p className="text-muted-foreground text-lg md:text-xl mb-8 max-w-2xl leading-relaxed">
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6">Erik Roncaglio</h1>
+              <p className="text-lg sm:text-xl md:text-2xl mb-3 md:mb-4 text-accent font-medium">Mestre em Barbearia Clássica & Moderna</p>
+              <p className="text-muted-foreground text-sm sm:text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl leading-relaxed">
                 Especialista em fades, cortes clássicos e barbearia tradicional. Atendimento personalizado com mais de uma década dedicada à arte da barbearia.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="xl" asChild>
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+                <Button variant="hero" size="lg" className="md:text-base" asChild>
                   <a href="#contato" aria-label="Agendar horário">Agendar horário</a>
                 </Button>
-                <Button variant="outline" size="xl" asChild>
+                <Button variant="outline" size="lg" className="md:text-base" asChild>
                   <a href="#portfolio" aria-label="Ver portfólio">Ver meu trabalho</a>
                 </Button>
               </div>
@@ -58,51 +58,51 @@ const Index = () => {
         </section>
 
         {/* Credenciais e Conquistas */}
-        <section className="container py-16">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+        <section className="container py-12 md:py-16 px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
             <div className="flex flex-col items-center">
-              <div className="p-4 rounded-full bg-accent/20 border border-accent/40 mb-4">
-                <Award className="text-accent" size={32} />
+              <div className="p-3 md:p-4 rounded-full bg-accent/20 border border-accent/40 mb-3 md:mb-4">
+                <Award className="text-accent" size={24} />
               </div>
-              <div className="text-3xl font-bold text-accent mb-2">12+</div>
-              <div className="text-muted-foreground">Anos de experiência</div>
+              <div className="text-2xl md:text-3xl font-bold text-accent mb-1 md:mb-2">12+</div>
+              <div className="text-muted-foreground text-sm md:text-base">Anos de experiência</div>
             </div>
             <div className="flex flex-col items-center">
-              <div className="p-4 rounded-full bg-accent/20 border border-accent/40 mb-4">
-                <Users className="text-accent" size={32} />
+              <div className="p-3 md:p-4 rounded-full bg-accent/20 border border-accent/40 mb-3 md:mb-4">
+                <Users className="text-accent" size={24} />
               </div>
-              <div className="text-3xl font-bold text-accent mb-2">5000+</div>
-              <div className="text-muted-foreground">Clientes atendidos</div>
+              <div className="text-2xl md:text-3xl font-bold text-accent mb-1 md:mb-2">5000+</div>
+              <div className="text-muted-foreground text-sm md:text-base">Clientes atendidos</div>
             </div>
             <div className="flex flex-col items-center">
-              <div className="p-4 rounded-full bg-accent/20 border border-accent/40 mb-4">
-                <Star className="text-accent" size={32} />
+              <div className="p-3 md:p-4 rounded-full bg-accent/20 border border-accent/40 mb-3 md:mb-4">
+                <Star className="text-accent" size={24} />
               </div>
-              <div className="text-3xl font-bold text-accent mb-2">4.9</div>
-              <div className="text-muted-foreground">Avaliação média</div>
+              <div className="text-2xl md:text-3xl font-bold text-accent mb-1 md:mb-2">4.9</div>
+              <div className="text-muted-foreground text-sm md:text-base">Avaliação média</div>
             </div>
             <div className="flex flex-col items-center">
-              <div className="p-4 rounded-full bg-accent/20 border border-accent/40 mb-4">
-                <MapPin className="text-accent" size={32} />
+              <div className="p-3 md:p-4 rounded-full bg-accent/20 border border-accent/40 mb-3 md:mb-4">
+                <MapPin className="text-accent" size={24} />
               </div>
-              <div className="text-3xl font-bold text-accent mb-2">3</div>
-              <div className="text-muted-foreground">Locais de atuação</div>
+              <div className="text-2xl md:text-3xl font-bold text-accent mb-1 md:mb-2">3</div>
+              <div className="text-muted-foreground text-sm md:text-base">Locais de atuação</div>
             </div>
           </div>
         </section>
 
         {/* Portfólio - Galeria de Trabalhos */}
-        <section id="portfolio" className="container py-20">
-          <header className="mb-16 text-center">
-            <h2 className="font-display text-4xl mb-4 text-foreground">Meu Portfólio</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Uma seleção dos meus trabalhos mais recentes. Cada corte é uma obra de arte única, adaptada ao estilo e personalidade de cada cliente.</p>
+        <section id="portfolio" className="container py-16 md:py-20 px-4">
+          <header className="mb-12 md:mb-16 text-center">
+            <h2 className="font-display text-3xl md:text-4xl mb-4 text-foreground">Meu Portfólio</h2>
+            <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto px-4">Uma seleção dos meus trabalhos mais recentes. Cada corte é uma obra de arte única, adaptada ao estilo e personalidade de cada cliente.</p>
           </header>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <figure className="group overflow-hidden rounded-xl border border-accent/20 bg-[image:var(--gradient-card)] shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-gold)] transition-all duration-500">
-              <img src={cutFade} alt="Corte fade alto executado por Erik Roncaglio" className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
-              <figcaption className="p-6">
-                <h3 className="font-semibold text-accent mb-2 text-lg">Fade Clássico Alto</h3>
-                <p className="text-sm text-muted-foreground mb-3">Técnica precisa com degradê limpo e alinhamento perfeito das linhas.</p>
+              <img src={cutFade} alt="Corte fade alto executado por Erik Roncaglio" className="w-full h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+              <figcaption className="p-4 md:p-6">
+                <h3 className="font-semibold text-accent mb-2 text-base md:text-lg">Fade Clássico Alto</h3>
+                <p className="text-xs md:text-sm text-muted-foreground mb-3">Técnica precisa com degradê limpo e alinhamento perfeito das linhas.</p>
                 <div className="flex items-center justify-between text-xs text-muted-foreground">
                   <span>Cliente: Marco A.</span>
                   <span>Duração: 45min</span>
@@ -110,10 +110,10 @@ const Index = () => {
               </figcaption>
             </figure>
             <figure className="group overflow-hidden rounded-xl border border-accent/20 bg-[image:var(--gradient-card)] shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-gold)] transition-all duration-500">
-              <img src={cutNavalhado} alt="Trabalho de navalha artístico por Erik Roncaglio" className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
-              <figcaption className="p-6">
-                <h3 className="font-semibold text-accent mb-2 text-lg">Arte com Navalha</h3>
-                <p className="text-sm text-muted-foreground mb-3">Desenhos únicos criados com navalha, combinando tradição e criatividade.</p>
+              <img src={cutNavalhado} alt="Trabalho de navalha artístico por Erik Roncaglio" className="w-full h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+              <figcaption className="p-4 md:p-6">
+                <h3 className="font-semibold text-accent mb-2 text-base md:text-lg">Arte com Navalha</h3>
+                <p className="text-xs md:text-sm text-muted-foreground mb-3">Desenhos únicos criados com navalha, combinando tradição e criatividade.</p>
                 <div className="flex items-center justify-between text-xs text-muted-foreground">
                   <span>Cliente: Rafael S.</span>
                   <span>Duração: 60min</span>
@@ -123,47 +123,47 @@ const Index = () => {
             <figure className="group overflow-hidden rounded-xl border border-accent/20 bg-[image:var(--gradient-card)] shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-gold)] transition-all duration-500">
               <img src={cutTesoura} alt="Corte clássico feito na tesoura" className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
               <figcaption className="p-4 text-center">
-                <h3 className="font-semibold text-accent mb-1">Tesoura</h3>
-                <p className="text-sm text-muted-foreground">Controle e textura</p>
+                <h3 className="font-semibold text-accent mb-1 text-sm md:text-base">Tesoura</h3>
+                <p className="text-xs md:text-sm text-muted-foreground">Controle e textura</p>
               </figcaption>
             </figure>
             <figure className="group overflow-hidden rounded-xl border border-accent/20 bg-[image:var(--gradient-card)] shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-gold)] transition-all duration-500">
               <img src={cutBarba} alt="Barba e cabelo com linhas definidas" className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
               <figcaption className="p-4 text-center">
-                <h3 className="font-semibold text-accent mb-1">Barba + Cabelo</h3>
-                <p className="text-sm text-muted-foreground">Linhas definidas</p>
+                <h3 className="font-semibold text-accent mb-1 text-sm md:text-base">Barba + Cabelo</h3>
+                <p className="text-xs md:text-sm text-muted-foreground">Linhas definidas</p>
               </figcaption>
             </figure>
           </div>
         </section>
 
         {/* Sobre o Barbeiro */}
-        <section id="sobre" className="container py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <section id="sobre" className="container py-16 md:py-20 px-4">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
             <div>
-              <h2 className="font-display text-4xl mb-6 text-foreground">Sobre Erik Roncaglio</h2>
-              <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
+              <h2 className="font-display text-3xl md:text-4xl mb-4 md:mb-6 text-foreground">Sobre Erik Roncaglio</h2>
+              <p className="text-muted-foreground leading-relaxed mb-4 md:mb-6 text-base md:text-lg">
                 Comecei na barbearia por paixão. Entre erros e acertos, descobri que técnica e postura fazem toda a diferença.
                 Depois de anos de prática e estudo, desenvolvi um método claro e direto para elevar qualquer barbeiro ao próximo nível.
               </p>
-              <p className="text-muted-foreground leading-relaxed text-lg">
+              <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                 Este curso é a condensação da minha jornada: o que funciona de verdade no dia a dia para encantar clientes e valorizar seu serviço.
               </p>
             </div>
-            <Card className="p-8 bg-[image:var(--gradient-card)] border border-accent/30 shadow-[var(--shadow-elegant)]">
-              <h3 className="font-display text-2xl mb-6 text-accent">A dor que você sente</h3>
-              <ul className="space-y-4 text-muted-foreground">
+            <Card className="p-6 md:p-8 bg-[image:var(--gradient-card)] border border-accent/30 shadow-[var(--shadow-elegant)]">
+              <h3 className="font-display text-xl md:text-2xl mb-4 md:mb-6 text-accent">A dor que você sente</h3>
+              <ul className="space-y-3 md:space-y-4 text-muted-foreground">
                 <li className="flex items-start gap-3">
-                  <ShieldCheck className="mt-1 text-accent flex-shrink-0" size={20} />
-                  <span>Insegurança ao manusear tesoura e máquina</span>
+                  <ShieldCheck className="mt-1 text-accent flex-shrink-0" size={18} />
+                  <span className="text-sm md:text-base">Insegurança ao manusear tesoura e máquina</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <ShieldCheck className="mt-1 text-accent flex-shrink-0" size={20} />
-                  <span>Cortes imprecisos e acabamento sem padrão</span>
+                  <ShieldCheck className="mt-1 text-accent flex-shrink-0" size={18} />
+                  <span className="text-sm md:text-base">Cortes imprecisos e acabamento sem padrão</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <ShieldCheck className="mt-1 text-accent flex-shrink-0" size={20} />
-                  <span>Dificuldade em fidelizar e aumentar a clientela</span>
+                  <ShieldCheck className="mt-1 text-accent flex-shrink-0" size={18} />
+                  <span className="text-sm md:text-base">Dificuldade em fidelizar e aumentar a clientela</span>
                 </li>
               </ul>
             </Card>
@@ -359,8 +359,8 @@ const Index = () => {
                   <li className="flex items-start gap-2"><CheckCircle2 className="mt-1 text-accent flex-shrink-0" size={16} /><span>Grupo VIP no WhatsApp</span></li>
                   <li className="flex items-start gap-2"><CheckCircle2 className="mt-1 text-accent flex-shrink-0" size={16} /><span>Bônus: E-book "Fidelização de Clientes"</span></li>
                 </ul>
-                <Button variant="hero" size="xl" className="w-full mb-4">
-                  Garantir minha vaga agora
+                <Button variant="hero" size="xl" className="w-full mb-4 text-sm md:text-base">
+                  Garantir vaga agora
                 </Button>
                 <p className="text-center text-sm text-muted-foreground">
                   Restam apenas <span className="text-accent font-semibold">23 vagas</span>
@@ -457,8 +457,8 @@ const Index = () => {
           <div className="max-w-3xl mx-auto">
             <h2 className="font-display text-4xl mb-4 text-foreground">Não perca esta oportunidade única!</h2>
             <p className="text-muted-foreground mb-8 text-xl">Junte-se aos mais de 2.847 barbeiros que já transformaram suas carreiras com Erik Roncaglio</p>
-            <Button variant="hero" size="xl" className="mb-6 pulse">
-              QUERO GARANTIR MINHA VAGA AGORA
+            <Button variant="hero" size="xl" className="mb-6 pulse text-sm md:text-base px-6 md:px-10">
+              Garantir vaga agora
             </Button>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 text-sm">
               <div className="flex flex-col items-center gap-2">
