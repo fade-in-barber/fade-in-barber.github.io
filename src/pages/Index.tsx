@@ -512,9 +512,9 @@ const Index = () => {
         </div>
       </footer>
       
-      <aside aria-label="selo de amostra — feito por Erik Roncaglio e Gulherme Motta para Vitor Daniel" className="fixed right-4 bottom-20 md:bottom-4 z-50">
+      <aside aria-label="selo de amostra — feito por Erik Roncaglio e Guilherme Motta para Vitor Daniel" className="fixed right-4 bottom-20 md:bottom-4 z-50">
         <div className="rounded-full bg-accent/15 border border-accent/40 backdrop-blur px-4 py-2 text-xs font-medium text-accent shadow-md">
-          Amostra • Feito por <span className="font-semibold">Erik Roncaglio</span> e <span className="font-semibold">Gulherme Motta</span> para <span className="font-semibold">Vitor Daniel</span>
+          Amostra • Feito por <span className="font-semibold">Erik Roncaglio</span> e <span className="font-semibold">Guilherme Motta</span> para <span className="font-semibold">Vitor Daniel</span>
         </div>
       </aside>
     </div>
